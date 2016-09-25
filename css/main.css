@@ -64,6 +64,18 @@ body {
 	min-width: 300px;
 	background-image: url(../images/bg-top.png);
 }
+.fancybox-custom .fancybox-skin {
+	box-shadow: 0 0 50px #222;
+}
+.gall > a {
+	text-decoration: none;
+}
+.fancybox img {
+    margin-bottom: 4px;
+    max-width: 200px;
+    max-height: 100px;
+}
+
 header {
 	text-align: center;
 }
@@ -119,8 +131,51 @@ h1 {
 	-o-transition: background-color 444ms ease;
 	transition: background-color 444ms ease;
 }
+.button a{
+	animation-direction: alternate;
+	-webkit-animation: pulse 2s infinite ease;
+	animation: pulse 2s infinite ease;
+}
+@-webkit-keyframes pulse {
+	50%	{ 
+		-webkit-transform: scale(1.25);
+	-moz-transform: scale(1.25);
+	-o-transform: scale(1.25);
+		opacity: 0.3;
+		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+	}
+}
+@keyframes pulse {
+	50%	{ 
+		-webkit-transform: scale(1.25);
+	-moz-transform: scale(1.25);
+	-o-transform: scale(1.25);
+		opacity: 0.3;
+		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+	}
+}
+
 .button a:hover {
 	background-color: orange;
+}
+
+.del-0.3s {
+	-webkit-animation-delay: .3s;
+    -moz-animation-delay: .3s;
+    -o-animation-delay: .3s;
+    animation-delay: .3s;
+}
+.del-0.8s {
+	-webkit-animation-delay: .8s;
+    -moz-animation-delay: .8s;
+    -o-animation-delay: .8s;
+    animation-delay: .8s;
+}
+.del-1s {
+	-webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
 }
 .top-text {
 	text-align: center;

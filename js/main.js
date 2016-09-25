@@ -90,10 +90,10 @@ function ValidMail(mailForm, submit) {
     mailForm = mailForm;
     submit = submit;
     container = document.querySelector('.mail-container');
+    mailContainer = document.querySelector('.email');
     errMess = document.createElement('div');
     errMess.className = "err-message";
     errMess.innerHTML = "Please, enter correct e-mail";
-
     
     validation = function() {
         if(mailForm.value !== "" && mailForm.value !== mailForm.defaultValue) {
@@ -130,11 +130,20 @@ function ValidMail(mailForm, submit) {
         }
     }
 
-    function Handler() {
+    function clearDefaultValue () {
+        mailContainer.defaultValue = "";
+    }
+
+    function Handler () {
         showResult();
     }
 
+    function Handler1 () {
+        clearDefaultValue();
+    }
+
     submit.addEventListener('click', Handler);
+    container.addEventListener('click', Handler1);
 
 };
 
@@ -148,8 +157,7 @@ function show () {
 
 window.onload = function() { 
 
-    setTimeout("show()", 1000)
-    // document.querySelector('.wrapper').style.display = "block";
+    setTimeout("show()", 10)
 
     var scrollUp = document.getElementById('scrollup'); 
 
@@ -169,9 +177,12 @@ window.onload = function() {
 
 
     window.onscroll = function () { 
-        if ( window.pageYOffset > 0 ) {
+        if (window.pageYOffset > 0) {
             scrollUp.style.display = 'block';
         } else {
+            scrollUp.style.display = 'none';
+        }
+        if (document.body.clientWidth < 1000) {
             scrollUp.style.display = 'none';
         }
     };
