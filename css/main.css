@@ -132,9 +132,9 @@ fieldset {
 header {
 	text-align: center;
 }
-header nav{
+header nav {
 	padding-top: 30px;
-	}
+}
 header nav > .item {
 	display: inline-block;
 	position: relative;
