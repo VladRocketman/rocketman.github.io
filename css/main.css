@@ -304,7 +304,7 @@ nav > .item.sub-menu-item:hover .sub-menu {
 	margin-bottom: 100px;
 }
 .hand {
-	top: 158px;
+	bottom: 0;
 	right: 50px;
 	background-image: url(../images/hand.png);
 	display: inline-block;
@@ -317,6 +317,7 @@ nav > .item.sub-menu-item:hover .sub-menu {
 }
 .level-1 .container {
 	padding: 100px 0 0 150px;
+	position: relative;
 }
 .level-2 .box {
 	padding: 60px 0 80px 70px;
